@@ -81,56 +81,56 @@ public class DWebSocket extends WebSocketClient {
         String eventName = (String) map.get("eventName");
         if (eventName == null) return;
         // 登录成功
-        if (eventName.equals("__login_success")) {
+        if ("__login_success".equals(eventName)) {
             handleLogin(map);
             return;
         }
         // 被邀请
-        if (eventName.equals("__invite")) {
+        if ("__invite".equals(eventName)) {
             handleInvite(map);
             return;
         }
         // 取消拨出
-        if (eventName.equals("__cancel")) {
+        if ("__cancel".equals(eventName)) {
             handleCancel(map);
             return;
         }
         // 响铃
-        if (eventName.equals("__ring")) {
+        if ("__ring".equals(eventName)) {
             handleRing(map);
             return;
         }
         // 进入房间
-        if (eventName.equals("__peers")) {
+        if ("__peers".equals(eventName)) {
             handlePeers(map);
             return;
         }
         // Newcomer enters the room
-        if (eventName.equals("__new_peer")) {
+        if ("__new_peer".equals(eventName)) {
             handleNewPeer(map);
             return;
         }
         // Refuse to answer
-        if (eventName.equals("__reject")) {
+        if ("__reject".equals(eventName)) {
             handleReject(map);
             return;
         }
         // offer
-        if (eventName.equals("__offer")) {
+        if ("__offer".equals(eventName)) {
             handleOffer(map);
             return;
         }
         // answer
-        if (eventName.equals("__answer")) {
+        if ("__answer".equals(eventName)) {
             handleAnswer(map);
             return;
         }
         // ice-candidate
-        if (eventName.equals("__ice_candidate")) {
+        if ("__ice_candidate".equals(eventName)) {
             handleIceCandidate(map);
         }
         // Leave the room
-        if (eventName.equals("__leave")) {
+        if ("__leave".equals(eventName)) {
             handleLeave(map);
 
         }
